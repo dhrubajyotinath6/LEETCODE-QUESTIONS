@@ -14,6 +14,7 @@ public:
              
               for(int leftPointer = 0; leftPointer < 10 - rightPointer; leftPointer++){  
                   
+                // we took the substring and convert it to variable[starting point, length]
                 int num = stoi(digits.substr(leftPointer, rightPointer));
                   
                 if(num >= low && num <= high) res.push_back(num); 
