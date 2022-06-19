@@ -1,3 +1,11 @@
+/*
+    unordered_map<string, int> umap;
+  
+    // inserting values by using [] operator
+    umap["GeeksforGeeks"] = 10;
+
+*/
+
 class Solution {
 public:
     vector<string> mostVisitedPattern(vector<string>& users,
@@ -13,9 +21,20 @@ public:
   // Basically store website and time data for every user name, by user name 
   for (auto i = 0; i < users.size(); ++i)
   {
+      
       userToDatas[users[i]][time[i]] = sites[i];
+      // userToDatas[users[i]]=[time[i], "sites[i]"];
+      
+      if(i == 1){
+          cout << users[i] << endl;
+          cout << time[i] << endl;
+          cout << sites[i] << endl;
+         
+      }
+      
   }
       
+    cout << endl <<endl;
   // Step 2: collect three sequences      
   for (auto userToData: userToDatas)
   {
@@ -23,6 +42,7 @@ public:
     // T :O(n^3)
     for (auto it = begin(userToData.second); it != end(userToData.second); ++it)
     {   
+        
       for (auto it1 = next(it); it1 != end(userToData.second); ++it1)
       {
           for (auto it2 = next(it1); it2 != end(userToData.second); ++it2)
@@ -38,8 +58,11 @@ public:
     }
   }
         
+        cout << endl << endl;
+        
   for (auto threeSequenceToCount : threeSequencesToCounts) {
-      // cout<< threeSequenceToCount.first<< " "<< threeSequenceToCount.second<< endl;
+      
+      cout<< threeSequenceToCount.first<< " "<< threeSequenceToCount.second<< endl;
     if (threeSequenceToCount.second >= maxCount) {
 	// If there is more than one solution, return the lexicographically smallest such 3-sequence.
       res = res == "" || 
