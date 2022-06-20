@@ -19,7 +19,7 @@ public:
         while(left <= right){
             
             if(mpp.find(num[left]) == mpp.end() || mpp[num[left]] != num[right]){
-                return false;
+                return false; // 8 9 '9' 6 8 -> when left and right points to 9, we get 6 from the map but we need 9 since                                   //right pointer is pointing towards 9
             }
             left++;
             right--;
@@ -27,3 +27,9 @@ public:
         return true;
     }
 };
+
+/*
+Be careful of that middle value in an odd-lengthed number. While the number 8 9 0 6 8 is strobogrammatic, the number 8 9 4 6 8 is not. And nor is 8 9 9 6 8 (this last example is one that is particularly likely to catch some people out, as the middle digit is rotatable, but it doesn't become itself).
+
+
+*/
