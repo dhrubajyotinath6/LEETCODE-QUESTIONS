@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/minimum-time-difference/discuss/437793/Thinking-Process  --- VERY IMP
+
+//https://leetcode.com/problems/minimum-time-difference/discuss/100640/Verbose-Java-Solution-Bucket
 class Solution {
     public int findMinDifference(List<String> timePoints) {
         boolean[] minutes = new boolean[24 * 60];
