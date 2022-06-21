@@ -113,15 +113,22 @@ public:
         stack<string> st;
         vector<string> components = splitStrings(path, '/');
         
+        // Split the input string on "/" as the delimiter
+        // and process each portion one by one
         for(auto comp : components){
             
+             // A no-op for a "." or an empty string
             if(comp == "." || comp.empty()) continue;
             
             else if(comp == ".."){
+                // If the current component is a "..", then
+                // we pop an entry from the stack if it's non-empty
                 if(st.empty() == false) st.pop();
             }
             
             else{
+                // Finally, a legitimate directory name, so we add it
+                // to our stack
                 st.push(comp);
             }
         }
