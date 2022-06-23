@@ -2,7 +2,13 @@
 
 // https://leetcode.com/problems/swap-adjacent-in-lr-string/discuss/1704920/C%2B%2B-one-pass-time%3AO(n)-space%3AO(1)-(with-explanation)
 
+/*
+RX - XR
+XL - LX
 
+Input: start = "RXXLRXRXL", end = "XRLXXRRLX"
+Output: true
+*/
 
 class Solution {
 public:
