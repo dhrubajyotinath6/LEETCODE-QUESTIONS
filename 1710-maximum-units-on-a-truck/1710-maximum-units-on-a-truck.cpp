@@ -36,12 +36,21 @@ public:
 	for(auto& box : boxTypes) freq[box[1]] += box[0];
         
 	// greedily choose starting from max units till either truckSize runs out or you choose all boxes
-        
+     
+    /*
 	for(int units = 1000; truckSize > 0 && units > 0; --units) { 
         
 		maxUnits += min(truckSize, freq[units]) * units;
 		truckSize -= freq[units];
 	}
+    */
+    
+    for(int units = 1000; truckSize > 0 && ~units; --units) { 
+        
+		maxUnits += min(truckSize, freq[units]) * units;
+		truckSize -= freq[units];
+	}
+    
         
 	return maxUnits;
 }
