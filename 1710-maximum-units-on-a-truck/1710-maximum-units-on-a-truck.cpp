@@ -37,7 +37,7 @@ public:
         
 	// greedily choose starting from max units till either truckSize runs out or you choose all boxes
         
-	for(int units = 1000; truckSize > 0 && ~units; --units) { 
+	for(int units = 1000; truckSize > 0 && units > 0; --units) { 
         
 		maxUnits += min(truckSize, freq[units]) * units;
 		truckSize -= freq[units];
