@@ -1,6 +1,11 @@
 /*
 https://leetcode.com/problems/count-servers-that-communicate/discuss/436130/C%2B%2B-Simple-Preprocessing
 
+Complexity
+Here m is the number of rows and n is the number of columns.
+Space: O(m+n).This can be reduced to min(m,n).
+Time: O(m*n).
+
 */
 
 class Solution {
