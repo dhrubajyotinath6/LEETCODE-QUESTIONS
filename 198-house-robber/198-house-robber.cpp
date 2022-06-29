@@ -53,6 +53,7 @@ public:
 };
 */
 
+/*
 class Solution {
 public:
     int rob(vector<int>& nums) {
@@ -76,6 +77,38 @@ public:
     
         
     return dp[dp.size() - 1];
+  }
+};
+*/
+
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        
+        return findMax(nums);
+    }
+    
+    
+    int findMax(const vector<int> &nums) {
+        
+    if(nums.empty() == true) return 0;
+        
+    int n1 = 0;  // if there are no houses
+        
+    int n2 = nums[0]; // if there are only 1 house
+        
+    int temp;
+        
+    for(int i = 2; i < nums.size() + 1; i++){
+        
+        int temp = max(nums[i - 1] + n1, n2);
+        
+        n1 = n2;
+        n2 = temp;
+    }
+    
+        
+    return n2;
   }
 };
 
