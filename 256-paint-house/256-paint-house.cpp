@@ -62,7 +62,8 @@ public:
 
 */
 
-
+/*
+// here  sc -> we are modifying the given input so sc is O(n) if we considered the modification (if not then sc is O(1))
 class Solution {
     
 public:
@@ -85,7 +86,43 @@ public:
          
 
         return min(min(costs[0][0], costs[0][1]), costs[0][2]);
-    }
-    
+    }    
   
 };
+*/
+
+class Solution {
+    
+public:
+    int minCost(vector<vector<int>>& costs) {
+        
+        if (costs.size() == 0) return 0; 
+        
+        vector<int> previousRow = costs[costs.size() - 1];
+        
+        for (int n = costs.size() - 2; n >= 0; n--) {
+            
+            vector<int> currentRow = costs[n];
+            
+            // Total cost of painting the nth house red.
+            currentRow[0] += min(previousRow[1], previousRow[2]);
+            
+            // Total cost of painting the nth house green.
+            currentRow[1] += min(previousRow[0], previousRow[2]);
+            
+            // Total cost of painting the nth house blue.
+            currentRow[2] += min(previousRow[0], previousRow[1]);
+            
+            previousRow = currentRow;
+        }
+
+         
+
+        return min(min(previousRow[0], previousRow[1]), previousRow[2]);
+    }    
+  
+};
+
+
+
+
