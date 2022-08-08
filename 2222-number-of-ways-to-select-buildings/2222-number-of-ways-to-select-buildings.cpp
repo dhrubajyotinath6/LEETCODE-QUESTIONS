@@ -1,6 +1,18 @@
 //https://leetcode.com/problems/number-of-ways-to-select-buildings/discuss/1907026/Easy-understanding-C%2B%2B-code-with-comments
 
 //DP ALSO POSSIBLE CHECK THE DISCUSSION SECTION
+/*
+The possible sequences of selected buildings is either "101" or "010".
+
+If the current building is '0',
+then the number of sequences of pattern "101" will be the 
+product of the number of occurances of building '1' before the current building 
+to the number of occurances of building '1' after the current building 
+and viceversa.
+
+*/
+
+
 class Solution {
 public:
     long long numberOfWays(string s) {
