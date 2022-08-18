@@ -1,3 +1,12 @@
+//https://leetcode.com/problems/reduce-array-size-to-the-half/discuss/1319416/C%2B%2BJavaPython-HashMap-and-Sort-then-Counting-Sort-O(N)-Clean-and-Concise
+
+//https://leetcode.com/problems/reduce-array-size-to-the-half/discuss/1319437/Simple-Solution-w-Explanation-or-Delete-Elements-by-Max-Frequency-or-O(N)-Beats-100
+
+
+
+// HASHMAP + GREEDY
+
+
 class Solution {
     
 public:
@@ -19,7 +28,7 @@ public:
            mpp[i]++;
        }
         
-       // 
+       // u can write comparator here
         
        priority_queue<pair<int, int>, vector<pair<int, int>>, valueCompare> maxHeap;
         
@@ -41,3 +50,7 @@ public:
         
     }
 };
+
+
+
+
