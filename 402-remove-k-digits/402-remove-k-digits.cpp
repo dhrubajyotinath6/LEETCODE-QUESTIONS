@@ -6,7 +6,10 @@ https://leetcode.com/problems/remove-k-digits/discuss/1779458/C%2B%2B-oror-Easy-
 https://leetcode.com/problems/remove-k-digits/discuss/88680/My-Easy-Understandable-C%2B%2B-Solution
 
 "10200"  -> 200
-1
+K = 1, 
+
+"10200" > 0
+K = 3
 
 "10"   -> 0
 1
