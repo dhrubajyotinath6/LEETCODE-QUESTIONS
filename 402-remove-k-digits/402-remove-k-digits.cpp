@@ -13,6 +13,15 @@ https://leetcode.com/problems/remove-k-digits/discuss/88680/My-Easy-Understandab
 
 "10001"
 4
+
+1234567890 -> 0
+k = 9 
+
+100200 -> 200
+K = 3
+
+100000 -> 0
+K=4, K = 1
 */
 
 class Solution {
