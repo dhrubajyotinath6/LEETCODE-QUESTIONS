@@ -11,6 +11,7 @@
  https://leetcode.com/problems/construct-string-from-binary-tree/discuss/104098/JavaC%2B%2B-1-liner
  https://leetcode.com/problems/construct-string-from-binary-tree/discuss/104089/Easy-C%2B%2B-Solution
  */
+/*
 class Solution {
 public:
     string tree2str(TreeNode* root) {
@@ -23,6 +24,27 @@ public:
         else if( root->right) s += "()";
         
         if (root->right) s += "(" + tree2str(root->right) + ")";
+        
+        return s;
+    }
+};
+*/
+
+class Solution {
+public:
+    string tree2str(TreeNode* root) {
+        
+        if(!root) return "";
+        
+        string s = to_string(root->val);
+        
+        if(root->left) s += "(" + tree2str(root->left) + ")";
+        
+        if(root->right && root->left == NULL) {
+            s += "()(" + tree2str(root->right) + ")";
+        }
+        
+        if (root->right && root->left != NULL) s += "(" + tree2str(root->right) + ")";
         
         return s;
     }
