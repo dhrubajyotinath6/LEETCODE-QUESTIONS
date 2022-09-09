@@ -29,6 +29,13 @@ DRY RUN:
 			 our final ans is 1
 
 */
+
+/*
+in short if [6,7] [6,8] 
+    two ways to sort possible
+    [6,8] [6,7] it will give 0 answer
+    [6,7] [6,8] it will give 1 answer 
+*/
 class Solution{
     
 public:
@@ -44,7 +51,13 @@ public:
     
      int numberOfWeakCharacters(vector<vector<int>> &properties){
          
-          sort(properties.begin(), properties.end(), comp); //sorting the array
+          //sorting based on attack -> properties[i] = [attacki, defensei]
+          // [[5,5],[6,3],[3,6]]   -> 3,6 ; 5,5 ; 6,3 ; 
+          sort(properties.begin(), properties.end(), comp); 
+         
+//           for(auto x : properties){
+//             cout << x[0] << "," << x[1] << " ; ";
+//           }
          
           int maxi = INT_MIN;                                //max till now while moving from right
          
