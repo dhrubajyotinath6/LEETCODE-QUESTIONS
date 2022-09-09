@@ -24,6 +24,9 @@ public:
         }
         
         k = k%len;
+        
+        if(k == 0) return head;
+        
         k = len - k;
         
         curr->next = head;
