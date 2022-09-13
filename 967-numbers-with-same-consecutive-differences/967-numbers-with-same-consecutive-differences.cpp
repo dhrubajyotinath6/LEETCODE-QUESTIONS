@@ -1,41 +1,25 @@
-//https://leetcode.com/problems/numbers-with-same-consecutive-differences/discuss/211183/JavaC%2B%2BPython-Iterative-BFS-Solution
-
-//https://leetcode.com/problems/numbers-with-same-consecutive-differences/solution/
 class Solution {
 public:
-        vector<int> numsSameConsecDiff(int N, int K) {
+    vector<int> numsSameConsecDiff(int n, int k) {
+        
+        vector<int> curr1 = {1,2,3,4,5,6,7,8,9};
+        
+        for(int i = 2; i <= n; i++){
             
-        vector<int> cur = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+            vector<int> curr2;
             
-        for (int i = 2; i <= N; ++i) {
+            for(int x : curr1){          
             
-            vector<int> cur2;
+            int y = x % 10;
             
-            for (int x : cur) {
-                
-                int y = x % 10;
-                
-                if (y + K < 10)
-                    cur2.push_back(x * 10 + y + K);
-                if (K > 0 && y - K >= 0)
-                    cur2.push_back(x * 10 + y - K);
-            }
-            cur = cur2;
+            if(y + k < 10) curr2.push_back(x*10 + (y + k));
+            if(y - k >= 0 && k > 0) curr2.push_back(x*10 + (y-k));
         }
-        return cur;
+        
+            curr1 = curr2;
+        }
+        
+        return curr1;
+        
     }
 };
-
-/*
-
-***  if (y - K >= 0)  ***
-Wrong Answer
-Details 
-Input
-2
-0
-Output
-[11,11,22,22,33,33,44,44,55,55,66,66,77,77,88,88,99,99]
-Expected
-[11,22,33,44,55,66,77,88,99]
-*/
