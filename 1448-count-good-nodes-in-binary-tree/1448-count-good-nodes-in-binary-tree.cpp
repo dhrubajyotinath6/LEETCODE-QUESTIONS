@@ -9,30 +9,31 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
-/*
-Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.
-
-Return the number of good nodes in the binary tree.
-
-
-*/
-
 class Solution {
-public:
-    int goodNodes(TreeNode* root) {   
-        
-        int numGoodNodes = 0;
-        dfs(root, INT_MIN, numGoodNodes);
-        return numGoodNodes;
-    }
     
-    void dfs(TreeNode* node, int maxSoFar, int &numGoodNodes){
+    int f(TreeNode* node, int maxi, int &count){
         
-        if(maxSoFar <= node->val) numGoodNodes++;
+        if(node == NULL) return 0;
         
-        if(node->left != NULL) dfs(node->left, max(node->val,maxSoFar), numGoodNodes);
+        if(node->val >= maxi) count++;
         
-        if(node->right != NULL) dfs(node->right, max(node->val,maxSoFar), numGoodNodes);
+        maxi = max(maxi,node->val);
+        
+        if(node->left) f(node->left, maxi, count);
+        if(node->right) f(node->right, maxi, count);
+        
+        return count;
+    }
+public:
+    int goodNodes(TreeNode* root) {
+        
+        if(!root) return 0;
+        
+        int count = 1;
+        
+        f(root->left, root->val, count);
+        f(root->right,root->val, count);
+        
+        return count;
     }
 };
