@@ -45,3 +45,14 @@ Expected
 0
 
 */
+
+/*
+1   2   3   5   6   7, target = 4;
+
+low = 3, high = 5 => mid = 2+3/2 = 2 
+
+0    1    2    3    5    6    7, target = 4
+
+low = 5, high = 6 => mid = 4+5/2 = 4, high = 4
+
+*/
