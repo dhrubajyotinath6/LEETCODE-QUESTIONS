@@ -11,12 +11,17 @@ public:
         int mod = 1e9 +7;
         
         stack<int>st;
+        
         vector<int> minPrev(n,-1),minNext(n,n);
         
         for(int i=0;i<n;i++)
         {
-            while(!st.empty()&&nums[st.top()]>=nums[i]){st.pop();}
-            if(!st.empty()){minPrev[i]=st.top();}
+            while(!st.empty() && nums[st.top()] >= nums[i]){
+                st.pop();
+            }
+            
+            if(!st.empty()) { minPrev[i]=st.top();}
+            
             st.push(i);
         }
         
@@ -24,7 +29,10 @@ public:
         
         for(int i=n-1;i>=0;i--)
         {
-            while(!st.empty()&&nums[st.top()]>nums[i]){st.pop();}
+            while(!st.empty() && nums[st.top()] > nums[i]){
+                st.pop();
+            }
+            
             if(!st.empty()){minNext[i]=st.top();}
             st.push(i);
         }
