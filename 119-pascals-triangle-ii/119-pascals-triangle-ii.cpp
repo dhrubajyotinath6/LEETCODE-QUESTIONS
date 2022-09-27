@@ -28,6 +28,9 @@ TC -> O(k^2)
 SC -> o(2k)
 */
 
+
+//APPROACH 2
+/*
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
@@ -46,3 +49,27 @@ public:
         return ans;
     }
 };
+
+TC -> O(k^2)
+SC -> o(k)
+*/
+
+
+//APPROACH 3
+class Solution {
+ public:
+  vector<int> getRow(int n) {
+    vector<int> ans = {1};
+
+    for (int k = 1; k <= n; k++)
+      ans.push_back((int)((ans.back() * (long long)(n - k + 1)) / k));
+
+    return ans;
+  }
+};
+
+/*
+TC -> O(k)
+SC -> o(k)
+*/
+
