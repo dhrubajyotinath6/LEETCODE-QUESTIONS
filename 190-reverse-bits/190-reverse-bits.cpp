@@ -13,3 +13,8 @@ public:
         return rev;
     }
 };
+
+/*
+TC - O(1)
+SC - O(1)
+*/
