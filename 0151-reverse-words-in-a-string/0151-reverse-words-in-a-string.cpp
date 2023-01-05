@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/reverse-words-in-a-string/discuss/1531693/C%2B%2B-2-solutions-O(1)-space-Picture-explain-Clean-and-Concise
 class Solution {
 public:
     string reverseWords(string s) {
