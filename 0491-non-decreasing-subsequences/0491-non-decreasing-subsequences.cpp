@@ -32,3 +32,12 @@ public:
         return res;
     }
 };
+
+/*
+https://leetcode.com/problems/non-decreasing-subsequences/discuss/97124/C%2B%2B-dfs-solution-using-unordered_set
+
+The unordered_set is used to avoid [4,6,7(1)] and [4,6,7(2)] in a same level when we dfs. But it will 
+not skip [4,6,7(1),7(2)], because 7(2) is added in the next dfs level of [4,6,7(1)]. Every time we 
+start a "next level dfs", we will initialize a new unordered_set.
+
+*/
