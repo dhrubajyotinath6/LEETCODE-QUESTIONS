@@ -6,16 +6,16 @@ public:
         
         if(n == 2) return 1;
         
-        int n1 = 0, n2 = 1, n3 = 1, temp;
+        int n0 = 0, n1 = 1, n2 = 1, temp;
         
-        for(int i = 4; i <=  n + 1; i++){
-            temp = n1 + n2 + n3;
+        for(int i = 3; i <=  n; i++){
+            temp = n0 + n1 + n2;
+            n0 = n1;
             n1 = n2;
-            n2 = n3;
-            n3 = temp;
+            n2 = temp;
         }
         
-        return n3;
+        return n2;
     }
 };
 
