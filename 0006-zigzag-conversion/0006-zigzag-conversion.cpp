@@ -54,7 +54,14 @@ public:
     }
 };
 */
+//https://leetcode.com/problems/zigzag-conversion/solution/ - check this
+//check 2nd approch -it is better
 
+//1st approach
+/*
+tc - O(N)
+sc - O(N)
+*/
 class Solution{
     
 public:
