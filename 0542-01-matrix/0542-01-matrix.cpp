@@ -1,5 +1,7 @@
 /*
-For those who are asking why DP is done in two passes, in DP we can only use the values which are previously calculated. When we are parsing from top left and coming down to bottom right, we can only use the values of above and left because only those two values are precomputed, if we take right and down, those values are not yet computed, if we work with those values we will get suboptimal answer. For example take this test case,
+For those who are asking why DP is done in two passes, in DP we can only use the values which are previously calculated. When we are parsing from top left 
+and coming down to bottom right, we can only use the values of above and left because only those two values are precomputed, if we take right and down,
+those values are not yet computed, if we work with those values we will get suboptimal answer. For example take this test case,
 
 	[1,0,1,1,0,0,1,0,0,1],
 	[0,1,1,0,1,0,1,0,1,1],
@@ -33,7 +35,8 @@ Last two rows look like this
 [1, 1, 1, 1, 0, 1, 0, 0, 1, 1]
  ^
  I am talking about updating this one
-On above it will see two on right it will see 1 (this is a false value, this value is not yet calculated), with this value we will incorrectly update this value to 2 instead of 3.
+On above it will see two on right it will see 1 (this is a false value, this value is not yet calculated), with this value we will incorrectly 
+update this value to 2 instead of 3.
 
 */
 
