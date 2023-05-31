@@ -26,6 +26,10 @@ public:
             
         }
         
+     /*
+     sum == min_sum -> means all numbers are -ve
+     
+     */
         return sum == min_sum ? max_sum : max(max_sum, sum - min_sum);
         /*
         return max(max_sum, sum - min_sum);
