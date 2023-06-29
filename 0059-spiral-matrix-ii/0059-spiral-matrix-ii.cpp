@@ -1,3 +1,12 @@
+/*
+We can observe that, for any given 
+
+n, the total number of layers is given by : (n+1)/2;
+This works for both even and odd n.
+
+
+*/
+
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
