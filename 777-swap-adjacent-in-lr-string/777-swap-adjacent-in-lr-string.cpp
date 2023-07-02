@@ -34,3 +34,29 @@ public:
         return i==j;
     }
 };
+
+
+
+
+--
+
+
+Here I translate 'X' to '.' for understanding more easily.
+
+start = "R..LR.R.L"
+end   = ".RL..RRL."
+From the above example, we can find some rules for 'L' and 'R':
+
+1. "XL" to "LX": L only go left
+2. "RX" to "XR": R only go right
+3. L and R cannot change their order
+
+For example, if we have "XXXXXXXL" and finally we may get the result "LXXXXXXX".
+
+-----------------------------------------------------------------
+We only need to check the "L" and "R" position in two string.
+Using two pointer i and j to keep comparing:
+
+skip 'X', make sure start[i] and end[j] is the same
+'R' position in start is smaller than end
+'L' position in start is larger than end
