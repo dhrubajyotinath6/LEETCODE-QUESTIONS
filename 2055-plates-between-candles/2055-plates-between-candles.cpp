@@ -19,6 +19,11 @@ Output: lower_bound for element 30 at index 2
 */
 
 
+Solution 1: Binary Search
+Store index of all candles in a vector.
+For each query find index of first and last candle in the given range using binary search.
+Number of plates between candles will be number of elements between first and last candle minus number of candles between them.
+
 class Solution {
 public:
     vector<int> platesBetweenCandles(string s, vector<vector<int>>& queries) {
