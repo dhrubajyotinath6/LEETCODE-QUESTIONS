@@ -68,7 +68,7 @@ public:
             int presentLength = 1;
             
             for(int i = 0; i < word.size(); i++){
-                string pred = word.substr(0,i) + word.substr(i+1, word.size()+1);
+                string pred = word.substr(0,i) + word.substr(i+1, word.size() - i -1);
                 
                 if(dp.find(pred) != dp.end()){
                     int prevLength = dp[pred];
