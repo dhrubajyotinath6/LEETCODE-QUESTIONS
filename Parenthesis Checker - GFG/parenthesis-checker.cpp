@@ -12,19 +12,23 @@ class Solution
     bool ispar(string x)
     {
         // Your code here
-        stack<char> st;
+        stack<int> st;
         
-        for(auto &ch : x){
-            if(ch == '(' || ch == '{' || ch == '[') st.push(ch);
-            else{
+        for(auto& ch : x){
+            
+            if(ch == '(' || ch == '{' || ch == '['){
+                st.push(ch);
+            }else {
                 
                 if(st.empty()) return false;
                 
                 char t = st.top();
                 st.pop();
                 
-                if((ch == ')' && t == '(') || (ch == '}' && t == '{') || (ch == ']' && t == '[') ) continue;
+                if( (ch == ')' && t == '(') || (ch == '}' && t == '{') || (ch == ']' && t == '[')) continue;
+                
                 return false;
+                
             }
         }
         
