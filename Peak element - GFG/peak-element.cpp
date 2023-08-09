@@ -22,7 +22,7 @@ class Solution
     {
        // Your code here
        if(n == 1) return 0;
-       if(arr[0] >= arr[1]) return 0;
+       if(arr[0] > arr[1]) return 0;
        if(arr[n-1] > arr[n-2]) return n-1;
        // 0    1    2    3     4     5  , n = 6  [1-4]
        for(int i = 1; i < n-1; i++){
