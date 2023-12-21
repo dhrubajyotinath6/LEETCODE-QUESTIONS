@@ -4,7 +4,6 @@ class Solution {
 public:
     bool isValidSerialization(string preorder) {
         
-        vector<string> output;
         istringstream ss(preorder);
         string token;
         
