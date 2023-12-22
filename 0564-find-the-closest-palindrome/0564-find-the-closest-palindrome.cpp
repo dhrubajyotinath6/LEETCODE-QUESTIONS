@@ -81,6 +81,7 @@ public:
     string nearestPalindromic(string n) {
         
         long long num = stoll(n);
+        
         vector<long long> palindrome = nearestPalindrome(num);
         
         int mini = INT_MAX;
@@ -109,5 +110,3 @@ public:
     }
 };
 
-//1331 - 1221 = 110
-//1221 - 1111 = 110
