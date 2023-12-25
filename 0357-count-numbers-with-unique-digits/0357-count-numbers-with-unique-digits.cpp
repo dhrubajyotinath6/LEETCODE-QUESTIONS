@@ -48,3 +48,6 @@ public:
         return ans;
     }
 };
+
+// sc - O(1)
+// tc - in the for loop, n maximum value can be 10 only, so tc is O(1)
