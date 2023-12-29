@@ -1,3 +1,8 @@
+//CHECK BETTER APPROACH
+//https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/discuss/490316/JavaC%2B%2BPython3-DP-O(nd)-Solution
+
+//CHECK LC DISCUSSION SECTION TOO
+
 class Solution {
     
 public:
