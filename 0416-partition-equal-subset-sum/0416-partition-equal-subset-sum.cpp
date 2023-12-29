@@ -1,4 +1,4 @@
-/*
+
 class Solution {
 public:
     bool canPartition(vector<int>& num) {
@@ -49,8 +49,8 @@ public:
     return dp[n - 1][sum];
   }
 };
-*/
 
+/*
 
 class Solution {
     
@@ -101,3 +101,4 @@ public:
   }
 
 };
+*/
