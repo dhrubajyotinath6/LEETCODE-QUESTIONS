@@ -2,7 +2,7 @@
 //https://leetcode.com/problems/super-ugly-number/discuss/277313/My-view-of-this-question-hope-it-can-help-you-understand!!!   --check this too
 /*
 tc - O(nk) ; k = primes.length
-sc - O(n)
+sc - O(n + k)
 */
 
 #define ll long long int
