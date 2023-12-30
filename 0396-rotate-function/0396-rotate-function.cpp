@@ -1,5 +1,7 @@
 //https://leetcode.com/problems/rotate-function/discuss/87853/Java-O(n)-solution-with-explanation
 
+//https://leetcode.com/problems/rotate-function/discuss/4477754/C%2B%2B-or-Easy-or-Explanation-with-diagram    -- my explanatio
+
 class Solution {
 public:
     int maxRotateFunction(vector<int>& nums) {
